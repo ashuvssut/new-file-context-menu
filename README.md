@@ -78,3 +78,7 @@ Builds a fresh unsigned release, tags it, pushes the tag, and publishes a GitHub
 ## Notes
 
 - App Sandbox is intentionally disabled. A sandboxed app only gets a temporary, URL-scoped write permission for the exact path it's opened with — enough to write into a selected folder, but not into a selected file's parent directory. Since this app needs to create files anywhere the user can right-click, it can't run sandboxed.
+
+## License
+
+[MIT](LICENSE)
