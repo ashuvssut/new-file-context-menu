@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         let folder = directory(for: target)
-        if let newFile = createNewFile(in: folder) {
+        if let newFile = createNewFile(in: folder), !isDesktop(folder) {
             NSWorkspace.shared.activateFileViewerSelecting([newFile])
         }
 
@@ -31,6 +31,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var isDirectory: ObjCBool = false
         FileManager.default.fileExists(atPath: url.path, isDirectory: &isDirectory)
         return isDirectory.boolValue ? url : url.deletingLastPathComponent()
+    }
+
+    private func isDesktop(_ folder: URL) -> Bool {
+        guard let desktop = FileManager.default.urls(for: .desktopDirectory, in: .userDomainMask).first else {
+            return false
+        }
+        return folder.standardizedFileURL.path == desktop.standardizedFileURL.path
     }
 
     private func createNewFile(in folder: URL) -> URL? {
