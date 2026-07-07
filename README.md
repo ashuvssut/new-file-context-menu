@@ -4,6 +4,10 @@ A tiny, invisible macOS helper app that creates a new empty file in the folder y
 
 It has no window, no Dock icon, and no UI of its own. It's launched, does its one job, and quits.
 
+## Demo
+
+<video src="https://github.com/ashuvssut/new-file-context-menu/raw/main/docs/new-file-demo.mp4" controls></video>
+
 ## How it works
 
 [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal) adds a right-click context menu to Finder and the Desktop, and lets you register arbitrary apps under **Preferences → Custom → Custom Menu Options**. When you pick one of those apps from the menu, OpenInTerminal simply runs:
