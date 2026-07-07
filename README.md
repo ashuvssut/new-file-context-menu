@@ -3,7 +3,7 @@
 <img width="1376" height="768" alt="Image" src="https://raw.githubusercontent.com/ashuvssut/new-file-context-menu/refs/heads/main/docs/new-file_demo_thumbnail.png" />
 
 
-A tiny, invisible macOS helper app that creates a new empty file in the folder you right-clicked — wired into [Finder's](https://support.apple.com/guide/mac-help/finder-mchlp1618/mac) right-click menu via [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal).
+A tiny, invisible macOS helper app that creates a new empty file in the folder you right-clicked — wired into macOS Finder's right-click menu via [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal).
 
 It has no window, no Dock icon, and no UI of its own. It's launched, does its one job, and quits.
 
@@ -48,9 +48,35 @@ The new file is named `untitled.txt`, incrementing to `untitled 2.txt`, `untitle
    sudo codesign --deep --force --sign - "/Applications/New File.app"
    ```
 
-5. Open **OpenInTerminal → Preferences → Custom** tab.
-6. Under **Custom Menu Options**, click **+**, select `New File.app` from `/Applications`, choose the **Editor** type, and confirm.
-7. Make sure **Apply to Finder Context Menu** (and/or **Apply to Finder Toolbar Menu**) is checked.
+5. Register the app in OpenInTerminal — see **[Setting up in OpenInTerminal](#setting-up-in-openinterminal)** below.
+
+## Setting up in OpenInTerminal
+
+`New File.app` has no menu entry of its own. Once it's in `/Applications`, you add it as a custom menu option inside **OpenInTerminal**, which is what wires it into Finder's right-click menu.
+
+**1. Add a custom menu option**
+
+Open **OpenInTerminal → Preferences → Custom**. Under **Custom Menu Options**, click **+** and choose **Manually Select From Finder**.
+
+<img src="https://raw.githubusercontent.com/ashuvssut/new-file-context-menu/refs/heads/main/docs/setup-1-add-app.png" width="420" alt="OpenInTerminal Custom preferences — click + and choose Manually Select From Finder" />
+
+**2. Select New File.app**
+
+In the file picker, go to **Applications**, select **New File.app**, and click **Open**.
+
+<img src="https://raw.githubusercontent.com/ashuvssut/new-file-context-menu/refs/heads/main/docs/setup-2-select-app.png" width="420" alt="Finder picker — select New File.app from Applications and click Open" />
+
+**3. Set it as an Editor and confirm**
+
+Leave the **Application Name** as **New File**, set **Application Type** to **Editor**, and click **Confirm**. Make sure **Apply to Finder Context Menu** (and/or **Apply to Finder Toolbar Menu**) is checked.
+
+<img src="https://raw.githubusercontent.com/ashuvssut/new-file-context-menu/refs/heads/main/docs/setup-3-set-editor.png" width="420" alt="Set Application Type to Editor and click Confirm" />
+
+**4. MANDATORY STEP**
+
+If you made it this far, you have the patience of a saint and, apparently, no repo star yet. Fix that. **Star the repo NOW!!** 🚨🚨
+
+**New File** now appears in Finder's right-click menu — see [Usage](#usage).
 
 ## Building from source
 
