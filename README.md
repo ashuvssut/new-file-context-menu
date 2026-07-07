@@ -1,12 +1,15 @@
 # New File
 
+<img width="1376" height="768" alt="Image" src="https://raw.githubusercontent.com/ashuvssut/new-file-context-menu/refs/heads/main/docs/new-file_demo_thumbnail.png" />
+
+
 A tiny, invisible macOS helper app that creates a new empty file in the folder you right-clicked — wired into [Finder's](https://support.apple.com/guide/mac-help/finder-mchlp1618/mac) right-click menu via [OpenInTerminal](https://github.com/Ji4n1ng/OpenInTerminal).
 
 It has no window, no Dock icon, and no UI of its own. It's launched, does its one job, and quits.
 
 ## Demo
-
-<video src="https://github.com/ashuvssut/new-file-context-menu/raw/main/docs/new-file-demo.mp4" controls></video>
+<!-- [![Watch the demo video](https://raw.githubusercontent.com/ashuvssut/new-file-context-menu/refs/heads/main/docs/new-file_demo_thumbnail.png)](https://raw.githubusercontent.com/ashuvssut/new-file-context-menu/refs/heads/main/docs/new-file_demo.mp4) -->
+https://github.com/user-attachments/assets/102f817d-72a5-4246-baba-078fa9fd5c63
 
 ## How it works
 
